@@ -85,13 +85,16 @@ body {
     font-family: 'PT Sans', sans-serif;
     min-height: 740px;
 
-    background: rgb(215, 215, 215);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
-    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background: rgb(20, 20, 20);
+    color: rgb(190, 190, 190);
+}
+
+body.impress-on-gyuri {
+    background: -webkit-radial-gradient(rgb(240, 240, 240) 0%, rgb(200, 200, 200) 50%, rgb(20, 20, 20) 100%);
+    background:    -moz-radial-gradient(rgb(240, 240, 240) 0%, rgb(200, 200, 200) 50%, rgb(20, 20, 20) 100%);
+    background:     -ms-radial-gradient(rgb(240, 240, 240) 0%, rgb(200, 200, 200) 50%, rgb(20, 20, 20) 100%);
+    background:      -o-radial-gradient(rgb(240, 240, 240) 0%, rgb(200, 200, 200) 50%, rgb(20, 20, 20) 100%);
+    background:         radial-gradient(rgb(240, 240, 240) 0%, rgb(200, 200, 200) 50%, rgb(20, 20, 20) 100%);
 }
 
 /*
@@ -701,3 +704,56 @@ a:focus {
     Thanks for reading. I hope you enjoyed it at least as much as I enjoyed writing it
     for you.
 */
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+ul,
+div.center {
+  text-align: center;
+}
+
+.later {
+  opacity: 1;
+}
+
+.active .later {
+  -webkit-animation: showlater 5s;
+  animation: showlater 5s;
+}
+
+.future .later {
+  opacity: 0;
+}
+
+@-webkit-keyframes showlater {
+  0% {opacity: 0;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes showlater {
+  0% {opacity: 0;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+#gyuri {
+  color: rgb(20, 20, 20);
+}
+
+.fadeimg img {
+  opacity: 1;
+  transition: linear 1s opacity;
+}
+
+.future.fadeimg img {
+  opacity: 0;
+}
+
+.past.fadeimg img {
+  opacity: .5;
+}
